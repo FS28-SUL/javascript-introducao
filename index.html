@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        #mensagem{
+            color: blue;
+        }
+
+        .bg-pink{
+            background-color: #c42079;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="mensagem"></h1>
+    <button id="btn" onclick="boasVindas()">boas vindas</button>
+
+    <script>
+        let h1 = document.querySelector("#mensagem");
+        h1.innerText = "Ola mundo";
+        h1.style.color = "blueviolet";
+        // h1.classList.add("bg-pink");
+
+        function boasVindas(){
+            h1.innerHTML = "Seja bem-vindo";
+        }
+
+    </script>
+</body>
+</html>
