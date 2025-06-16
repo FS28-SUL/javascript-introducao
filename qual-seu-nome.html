@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra seu nome</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="h-screen flex justify-center items-center bg-yellow-400">
+    <div class="w-[500px] bg-white rounded-xl p-4">
+        <h1 class="text-2xl font-semibold text-center mb-8">Descubra seu nome de Forrozeiro</h1>
+        <div class="flex gap-3">
+            <div class="flex-1">
+                <label for="">Dia do aniversário</label>
+                <input id="dia" type="text" class="outline rounded pl-3">
+            </div>
+            <div class="flex-1">
+                <label for="">Mês do aniversário</label>
+                <input id="mes" type="text" class="outline rounded pl-3">
+            </div>
+        </div>
+        <button onclick="escolherNome()" class="cursor-pointer">Descobrir</button>
+        <div id="mensagem"></div>
+    </div>
+
+    <script>
+        function escolherNome() {
+            let div = document.querySelector("#mensagem");
+            let inputDia = document.querySelector("#dia");
+            let inputMes = document.querySelector("#mes");
+
+            div.innerHTML = `escolher o dia: ${inputDia.value}, escolher o mês: ${inputMes.value}`
+        }
+
+    </script>
+</body>
+
+</html>
