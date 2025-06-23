@@ -21,17 +21,39 @@
                 <input id="mes" type="text" class="outline rounded pl-3">
             </div>
         </div>
-        <button onclick="escolherNome()" class="cursor-pointer">Descobrir</button>
-        <div id="mensagem"></div>
+        <button onclick="escolherNome()"
+            class="cursor-pointer w-full h-[40px] bg-yellow-400 rounded mt-4">Descobrir</button>
+        <div id="mensagem" class="text-center mt-8 text-2xl font-bold"></div>
     </div>
 
     <script>
         function escolherNome() {
+            
             let div = document.querySelector("#mensagem");
-            let inputDia = document.querySelector("#dia");
-            let inputMes = document.querySelector("#mes");
+            let inputDia = document.querySelector("#dia").value;
+            let inputMes = document.querySelector("#mes").value;
+            let nome = "";
 
-            div.innerHTML = `escolher o dia: ${inputDia.value}, escolher o mês: ${inputMes.value}`
+            // condições dos dias
+            if (inputDia == 1) {
+                nome = "Marcão";
+            } else if (inputDia == 2) {
+                nome = "Wesley";
+            } else if (inputDia == 3) {
+                nome = "Bruninho";
+            }
+
+
+            // condições dos meses
+            if (inputMes == 1) {
+                nome += " dos teclados";
+            } else if (inputMes == 2) {
+                nome += " pegador";
+            } else if (inputMes == 3) {
+                nome += " pipocado";
+            }
+
+            div.innerHTML = nome;
         }
 
     </script>
